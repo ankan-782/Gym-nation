@@ -1,0 +1,13 @@
+.about-us-bg {
+    background-color: #2e2e2e;
+}
+.about-us-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+@media screen and (min-width: 992px){
+    .about-us-content{
+        min-height: calc(100vh - 106px);
+    }
+}

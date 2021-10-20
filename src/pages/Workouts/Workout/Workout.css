@@ -1,0 +1,9 @@
+.workout {
+    background-color: #252727;
+}
+.workout:hover {
+    /* background-color: rgb(76, 155, 76) !important; */
+    box-shadow: 0.5px 0.5px 20px gray;
+    /* color: black; */
+    transition: 0.3s;
+}

@@ -1,0 +1,39 @@
+.single-service-details-bg {
+    background-color: #222222;
+}
+.trainer-img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.level {
+    background-color: goldenrod;
+    padding: 1px 15px;
+    border-radius: 20px;
+    color: black;
+}
+.category{
+    font-size: 12px;
+    padding-bottom: 9px;
+    text-transform: uppercase;
+    color: goldenrod;
+}
+.trainer-info {
+    background-color: rgba(53, 50, 44, 0.671);
+    padding: 10px;
+}
+.trainer-img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@media screen and (min-width: 992px){
+    .single-service-details-content{
+        min-height: calc(100vh - 106px);
+    }
+    .trainer-info-text-style {
+        width: 50%;
+    }
+}

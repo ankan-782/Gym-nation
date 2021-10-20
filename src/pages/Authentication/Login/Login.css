@@ -1,0 +1,29 @@
+.login-bg {
+    background-color: rgb(39, 39, 39);
+}
+
+.form-bg {
+    background-color: rgb(115, 129, 141);
+}
+.input-bg {
+    background-color: rgb(56, 60, 63);
+}
+input:focus {
+    background-color: rgb(56, 60, 63) !important;
+    color: aliceblue !important;
+}
+input:checked {
+    background-color: rgb(52, 62, 70) !important;
+    border-color: rgb(52, 62, 70) !important;
+}
+
+
+@media screen and (min-width: 992px){
+    .login-content {
+        min-height: calc(100vh - 106px);
+    }
+    .img-container {
+        width: 800px;
+        margin-right: 50px;
+    }
+}

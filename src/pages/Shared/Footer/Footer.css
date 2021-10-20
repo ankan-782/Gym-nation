@@ -1,0 +1,41 @@
+#big-footer {
+    color: whitesmoke;
+    background-color: #1b1d1d;
+}
+
+.footer-brand {
+    color: whitesmoke;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+.footer-brand:hover{
+    color: rgb(76, 155, 76);
+}
+.logo {
+    -webkit-filter: invert(1);
+   filter: invert(1);
+}
+
+.nav-text:hover {
+    color: rgb(76, 155, 76) !important;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.social-links a:hover {
+    color: rgb(76, 155, 76);
+}
+
+.small-footer {
+    background-color: #222325;
+}
+
+#small-footer p {
+    font-size: 2rem;
+    padding: 5rem 0;
+    text-align: center;
+}

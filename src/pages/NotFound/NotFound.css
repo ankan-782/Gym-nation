@@ -1,0 +1,17 @@
+.not-found-bg {
+    background-image: url(/src/images/notFound/notFoundFitness.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media screen and (min-width: 992px){
+    .error-content {
+        min-height: calc(100vh - 106px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 10rem;
+    }
+}

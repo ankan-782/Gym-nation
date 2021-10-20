@@ -1,0 +1,37 @@
+.contact-us-bg {
+    background-color: #242424;
+}
+
+/* map */
+.mapouter {
+    position: relative;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+}
+
+.gmap_iframe {
+    height: 300px !important;
+}
+
+textarea {
+    padding: 10px;
+}
+
+input {
+    width: 88%;
+    padding: 10px 0;
+}
+
+.input-bg {
+    background-color: rgb(56, 60, 63);
+}
+
+
+@media screen and (min-width: 992px){
+    .contact-us-content{
+        min-height: calc(100vh - 106px);
+    }
+}

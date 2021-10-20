@@ -1,0 +1,12 @@
+.brand {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.nav-text:hover {
+    color: rgb(76, 155, 76) !important;
+}
+.nav-text-active {
+    color: rgb(76, 155, 76) !important;
+}
+.pointer {
+    cursor: pointer;
+}
