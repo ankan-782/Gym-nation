@@ -1,7 +1,9 @@
 import React from 'react';
 import './Contacts.css';
+import useAuth from '../../../hooks/useAuth';
 
 const Contacts = () => {
+    const {user} = useAuth();
     return (
         <div className="contact-us-bg">
             <div className="contact-us-content py-5">
@@ -36,11 +38,11 @@ const Contacts = () => {
                             <h2 className="text-white text-center mb-3">Contact Us</h2>
                             <div className="d-flex align-items-center">
                                 <i className="fas fa-user fs-2 me-3 text-white opacity-75"></i>
-                                <input type="text" className="my-3 form-control input-bg rounded-0 text-white px-3" placeholder="Name" />
+                                <input type="text" className="my-3 form-control input-bg rounded-0 text-white px-3" placeholder="Name" value={user.displayName} />
                             </div>
                             <div className="d-flex align-items-center">
                                 <i className="fas fa-envelope fs-2 me-3 text-white opacity-75"></i>
-                                <input type="email" className="my-3 form-control input-bg rounded-0 text-white px-3" placeholder="Email" />
+                                <input type="email" className="my-3 form-control input-bg rounded-0 text-white px-3" placeholder="Email" value={user.email} />
                             </div>
                             <div className="d-flex">
                                 <i className="fas fa-comment-alt fs-2 me-3 text-white opacity-75 mt-4"></i>
