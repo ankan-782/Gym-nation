@@ -9,33 +9,60 @@
     text-align: center;
 }
 
-.footer-brand:hover{
-    color: rgb(76, 155, 76);
-}
-.logo {
-    -webkit-filter: invert(1);
-   filter: invert(1);
+.footer-brand:hover {
+    color: whitesmoke;
 }
 
-.nav-text:hover {
-    color: rgb(76, 155, 76) !important;
+.logo {
+    -webkit-filter: invert(1);
+    filter: invert(1);
 }
 
 .social-links a {
     text-decoration: none;
-    color: whitesmoke;
 }
 
-.social-links a:hover {
-    color: rgb(76, 155, 76);
+.fa-facebook {
+    color: whitesmoke;
+    transition: 0.2s;
+}
+
+.fa-instagram {
+    color: whitesmoke;
+    transition: 0.2s;
+}
+
+.fa-twitter {
+    color: whitesmoke;
+    transition: 0.2s;
+}
+
+.fa-linkedin {
+    color: whitesmoke;
+    transition: 0.2s;
+}
+
+.fa-facebook:hover {
+    color: rgb(23, 113, 230);
+}
+
+.fa-instagram:hover {
+    color: rgb(207, 43, 118);
+}
+
+.fa-twitter:hover {
+    color: rgb(28, 147, 228);
+}
+
+.fa-linkedin:hover {
+    color: rgb(2, 110, 170);
 }
 
 .small-footer {
     background-color: #222325;
 }
 
-#small-footer p {
-    font-size: 2rem;
-    padding: 5rem 0;
+.small-footer p {
+    font-size: 0.8rem;
     text-align: center;
 }

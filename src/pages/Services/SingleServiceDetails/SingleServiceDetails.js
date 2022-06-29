@@ -12,8 +12,8 @@ const SingleServiceDetails = () => {
     const { img, serviceName, category, short_description, level, price, name } = serviceDetail;
 
     return (
-        <div className="single-service-details-bg text-white">
-            <div className="container p-5 single-service-details-content d-flex justify-content-center align-items-center">
+        <div id='single-service-details' className="single-service-details-bg text-white d-flex justify-content-center align-items-center">
+            <div className="container p-5">
                 <div className="row g-5">
                     <div className="col-12 col-lg-6">
                         <div className="mb-3">

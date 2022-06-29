@@ -34,7 +34,7 @@ const Contacts = () => {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className='px-3 p-md-0'>
                             <h2 className="text-white text-center mb-3">Contact Us</h2>
                             <div className="d-flex align-items-center">
                                 <i className="fas fa-user fs-2 me-3 text-white opacity-75"></i>

@@ -47,16 +47,16 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="mt-5">
-                                <NavLink to="/home" className="nav-text text-white text-decoration-none me-3">Home</NavLink>
-                                <NavLink to="/services" className="nav-text text-white text-decoration-none me-3">Services</NavLink>
-                                <NavLink to="/workouts" className="nav-text text-white text-decoration-none me-3">Workouts</NavLink>
-                                <NavLink to="/trainers" className="nav-text text-white text-decoration-none">Trainers</NavLink>
+                                <NavLink to="/home" className="text-white text-decoration-none me-3">Home</NavLink>
+                                <NavLink to="/services" className="text-white text-decoration-none me-3">Services</NavLink>
+                                <NavLink to="/workouts" className="text-white text-decoration-none me-3">Workouts</NavLink>
+                                <NavLink to="/trainers" className="text-white text-decoration-none">Trainers</NavLink>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="small-footer text-center text-white py-4">
+            <div className="small-footer text-center text-white py-3">
                 <p className="m-0">Copyright © 1997-2022   ||   GYM-NATION   ||   Avijit Roy</p>
             </div>
         </>

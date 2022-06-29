@@ -1,12 +1,22 @@
 .brand {
     font-family: 'Josefin Sans', sans-serif;
 }
-.nav-text:hover {
-    color: rgb(76, 155, 76) !important;
+
+.nav-bg {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 }
-.nav-text-active {
-    color: rgb(76, 155, 76) !important;
+
+.navigation-link {
+    text-decoration: none;
+    transition: 0.2s;
 }
+
+.navigation-link:hover {
+    color: rgb(194, 194, 194) !important;
+}
+
 .pointer {
     cursor: pointer;
 }
