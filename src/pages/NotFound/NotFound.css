@@ -1,3 +1,10 @@
+.error-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .not-found-bg {
     background-image: url(/src/images/notFound/notFoundFitness.jpg);
     background-repeat: no-repeat;
@@ -5,9 +12,8 @@
     background-attachment: fixed;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
     .error-content {
-        min-height: calc(100vh - 106px);
         display: flex;
         flex-direction: column;
         align-items: flex-start;

@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound/NotFound';
 import AuthProvider from './contexts/AuthProvider';
 import Login from './pages/Authentication/Login/Login';
 import Registration from './pages/Authentication/Registration/Registration';
+import LoginRoute from './pages/Authentication/LoginRoute/LoginRoute';
 
 function App() {
 
@@ -39,12 +40,12 @@ function App() {
             <PrivateRoute path="/trainers">
               <Team></Team>
             </PrivateRoute>
-            <Route path="/login">
+            <LoginRoute path="/login">
               <Login></Login>
-            </Route>
-            <Route path="/register">
+            </LoginRoute>
+            <LoginRoute path="/register">
               <Registration></Registration>
-            </Route>
+            </LoginRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

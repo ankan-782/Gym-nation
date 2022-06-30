@@ -37,7 +37,13 @@ const Header = () => {
                     <div className="ms-auto d-flex justify-content-center align-items-center">
                         <div>
                             {user?.email && <span className="text-dark fw-bold me-3 text-uppercase">{user?.displayName}</span>}
-                            <NavLink to="/login">{user.email ? <img src={user?.photoURL} alt="" width="40" height="40" style={{borderRadius: "50%"}}/> :<img src={avatar} title="User not logged in" alt="" width="40" height="40" style={{borderRadius: "50%"}} />}</NavLink>
+                            {
+                                user?.email
+                                    ?
+                                    <NavLink to='/'>{user.email && user?.photoURL ? <img src={user?.photoURL} alt="" width="40" height="40" style={{ borderRadius: "50%" }} /> : <img src={avatar} title="User not logged in" alt="" width="40" height="40" style={{ borderRadius: "50%" }} />}</NavLink>
+                                    :
+                                    <NavLink to='/login'><img src={avatar} title="User not logged in" alt="" width="40" height="40" style={{ borderRadius: "50%" }} /></NavLink>
+                            }
                         </div>
                     </div>
                 </div>

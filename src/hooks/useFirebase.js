@@ -8,89 +8,83 @@ initializeAuthentication();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
+    const [authError, setAuthError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
-    const [error, setError] = useState('');
-
-    //for changing route of user after login
-    // const location = useLocation();
-    // const history = useHistory();
-    // const redirect_url = location.state?.form || '/';
 
     const auth = getAuth();
-    const googleProvider = new GoogleAuthProvider();
 
-
-    // Sign up
-    const processRegistration = (e) => {
-        e.preventDefault();
-        // setIsLoading(true);
-        console.log(email, password);
-        if (!/(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8}/.test(password)) {
-            setError('Password should be at least of 8 characters and must have one uppercase letter, one digits, one lowercase letter');
-            return;
-        }
-        return createUserWithEmailAndPassword(auth, email, password)
-        // .then(result => {
-        //     setUser(result.user);
-        //     console.log(result.user);
-        //     history.push(redirect_url);
-        //     setError('');
-        //     setUserDetails();
-        // })
-        // .catch(error => {
-        //     setError(error.message);
-        // })
-        // .finally(() => setIsLoading(false));
-    }
-
-    // Sign in
-    const processLogin = (e) => {
-        e.preventDefault();
-        // setIsLoading(true);
-        return signInWithEmailAndPassword(auth, email, password)
-        // .then(result => {
-        //     setUser(result.user);
-        //     history.push(redirect_url);
-        //     setError("");
-        // })
-        // .catch((error) => {
-        //     setError(error.message);
-        // })
-        // .finally(() => setIsLoading(false));
-    }
-
-    const setUserDetails = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-            .then(result => {
-
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-    }
-
-
-    // google sign in
-    const signInUsingGoogle = () => {
-        return signInWithPopup(auth, googleProvider)
-    }
-
-    
     // observe whether user auth state changed or not
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-            }
-            else {
+            } else {
                 setUser({});
             }
             setIsLoading(false);
         });
-    }, []);
+        return () => unsubscribe;
+    }, [auth])
+
+
+    // google sign in
+    const googleProvider = new GoogleAuthProvider();
+    const signInUsingGoogle = (location, history) => {
+        setIsLoading(true);
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+                setAuthError('');
+
+            }).catch((error) => {
+                setAuthError(error.message);
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+
+    // Sign up or Registration
+    const processRegistration = (email, password, name, history) => {
+        setIsLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                setAuthError('');
+                const newUser = { email, displayName: name };
+                setUser(newUser);
+                // send name to firebase after creation
+                updateProfile(auth.currentUser, {
+                    displayName: name
+                })
+                    .then((result) => {
+                        setUser(result.user);
+                    })
+                    .catch((error) => {
+                        setAuthError(error.message);
+                    });
+                history.replace('/');
+            })
+            .catch((error) => {
+                setAuthError(error.message);
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+    // Sign in or login
+    const processLogin = (email, password, location, history) => {
+        setIsLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // alert('successfully logged in');
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+                setAuthError('');
+            })
+            .catch((error) => {
+                setAuthError(error.message);
+            })
+            .finally(() => setIsLoading(false));
+    }
 
 
     //log out functionality
@@ -98,7 +92,9 @@ const useFirebase = () => {
         setIsLoading(true);
         signOut(auth)
             .then(() => {
-                setUser({});
+                // Sign-out successful.
+            }).catch((error) => {
+                setAuthError(error.message);
             })
             .finally(() => setIsLoading(false));
     }
@@ -106,18 +102,12 @@ const useFirebase = () => {
 
     return {
         user,
-        error,
         isLoading,
         signInUsingGoogle,
         processRegistration,
         processLogin,
         logOut,
-        setEmail,
-        setPassword,
-        setName,
-        setError,
         setUser,
-        setUserDetails,
         setIsLoading
     }
 };

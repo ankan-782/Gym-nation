@@ -1,0 +1,8 @@
+.login-route-bg {
+    background-color: #2e2e2e;
+}
+@media screen and (min-width: 992px){
+    .login-route-content{
+        min-height: 100vh;
+    }
+}
