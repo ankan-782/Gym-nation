@@ -73,11 +73,35 @@ npm start
 
 - Full website at larger devices
 
-![screenshot 1](./src/images/screenshots/larger-device.png)
+![screenshot 1](./src/images/screenshots/landing-page-larger-device.png)
 
-- at smaller devices
+- Service page at larger devices
 
-![screenshot 2](./src/images/screenshots/smaller-devices.png)
+![screenshot 2](./src/images/screenshots/services-page-larger-device.png)
+
+- Service details page at larger devices
+
+![screenshot 3](./src/images/screenshots/service-details-page-larger-device.png)
+
+- Login page at larger devices
+
+![screenshot 4](./src/images/screenshots/login-page-larger-device.png)
+
+- Registration page at larger devices
+
+![screenshot 5](./src/images/screenshots/registration-page-larger-device.png)
+
+- Trainers page at larger devices
+
+![screenshot 6](./src/images/screenshots/trainers-page-larger-device.png)
+
+- workouts page at larger devices
+
+![screenshot 7](./src/images/screenshots/workouts-page-larger-device.png)
+
+- navbar opened at smaller devices
+
+![screenshot 8](./src/images/screenshots/navbar-opened-smaller-device.png)
 
 ## My process
 
