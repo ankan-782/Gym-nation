@@ -1,3 +1,57 @@
+.banner-bg {
+    background-image: url('https://i.ibb.co/YjPt1gy/img-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-bg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.banner-title {
+    background: linear-gradient(315deg, #5b6568 0%, #d3d3d3 74%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.banner-description {
+    background: linear-gradient(315deg, #5b6568 0%, #d3d3d3 74%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.banner-content {
+    padding-block: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-btn {
+    border: 2px solid rgb(76, 155, 76);
+    background-color: transparent;
+    color: white;
+    padding: 15px 40px;
+    transition: 0.3s;
+}
+
+.banner-btn:hover {
+    background-color: rgb(76, 155, 76);
+}
+
 .caption-content {
     background-color: rgba(0, 0, 0, 0.6);
     width: 40%;
@@ -114,4 +168,11 @@
     background-color: black;
     opacity: 0.6;
     z-index: -1;
+}
+
+@media screen and (min-width: 992px) {
+    .banner-content {
+        padding-block: 0;
+        min-height: 100vh;
+    }
 }

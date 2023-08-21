@@ -8,9 +8,9 @@ import img4 from '../../../images/about/img-4.jpg';
 const AboutUs = () => {
     return (
         <div id='about-us' className="about-us-bg text-white">
-            <div className="about-us-content p-5 d-flex justify-content-center align-items-center">
-                <div className="row g-5">
-                    <div className="col-12 col-lg-6 order-last">
+            <div className="about-us-content container px-lg-0 px-4">
+                <div className="row row-cols-1 row-cols-xl-2 g-5 align-items-center">
+                    <div className="col order-xl-last order-first">
                         <div className="row g-3">
                             <div className="col-12 col-lg-6">
                                 <img src={img1} alt="" className="img-fluid mb-3 border border-1" />
@@ -22,7 +22,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 order-fast">
+                    <div className="col order-xl-first order-last">
                         <h2 className="mb-5 border-bottom border-3 pb-2">About Us</h2>
                         <h4 className="mb-5">From the moment you walk through the door you know GYM-NATION is a unique place</h4>
                         <p>When we created GYM-NATION, we knew we wanted to be more than just a simple gym. Having worked in traditional gyms in the past, we knew we needed to create a concept that would provide our members with the most effective tools for success. This meant we needed to offer a wide range of classes both for children and adults.</p>

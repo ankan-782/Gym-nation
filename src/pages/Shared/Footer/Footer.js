@@ -11,9 +11,9 @@ const Footer = () => {
                     <NavLink className="navbar-brand text-uppercase footer-brand fs-1" to="/home"><img src={logo} className="logo" alt="" width="80" height="80" />G y m N a t i o n</NavLink>
                 </div>
                 <hr className="container" />
-                <div className="container p-0">
-                    <div className="d-lg-flex justify-content-between align-items-center py-3">
-                        <div className="px-3 px-lg-0">
+                <div className="container px-lg-0 px-4">
+                    <div className="row g-5 align-items-center py-3">
+                        <div className="col-12 col-lg-8">
                             <div>
                                 <p className="mb-5">We earned a reputation of being good at what we do. The longest running gym in Sylhet. Owned and operated by a personal trainer with over 25 years experience.</p>
                             </div>
@@ -24,21 +24,21 @@ const Footer = () => {
                             </div>
                             <hr />
                             <div className="d-flex fs-3 social-links mt-4">
-                                <a href="https://www.facebook.com/ankan.roy.50999" target="_blank" className="me-3">
+                                <a href="https://www.facebook.com/ankan.roy.50999" target="_blank" rel="noreferrer" className="me-3">
                                     <i className="fab fa-facebook"></i>
                                 </a>
-                                <a href="https://www.instagram.com/ankan_782/" target="_blank" className="me-3">
+                                <a href="https://www.instagram.com/ankan_782/" target="_blank" rel="noreferrer" className="me-3">
                                     <i className="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://twitter.com/AvijitAnkan" target="_blank" className="me-3">
+                                <a href="https://twitter.com/AvijitAnkan" target="_blank" rel="noreferrer" className="me-3">
                                     <i className="fab fa-twitter"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/avijit-roy-b6428b174/" target="_blank">
+                                <a href="https://www.linkedin.com/in/avijit-roy-b6428b174/" target="_blank" rel="noreferrer">
                                     <i className="fab fa-linkedin"></i>
                                 </a>
                             </div>
                         </div>
-                        <div className="px-3 px-lg-0 mt-5 mt-lg-0 ms-lg-5">
+                        <div className="col-12 col-lg-4 mt-5 mt-lg-0">
                             <div>
                                 <h5>Receive Email Updates</h5>
                                 <div className="d-flex">

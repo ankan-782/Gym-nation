@@ -108,7 +108,8 @@ const useFirebase = () => {
         processLogin,
         logOut,
         setUser,
-        setIsLoading
+        setIsLoading,
+        authError
     }
 };
 

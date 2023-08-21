@@ -13,7 +13,7 @@ const SingleServiceDetails = () => {
 
     return (
         <div id='single-service-details' className="single-service-details-bg text-white d-flex justify-content-center align-items-center">
-            <div className="container p-5">
+            <div className="container px-lg-0 px-4 py-5">
                 <div className="row g-5">
                     <div className="col-12 col-lg-6">
                         <div className="mb-3">
@@ -44,7 +44,7 @@ const SingleServiceDetails = () => {
                         <h4 className="mt-5">Price: ${price}</h4>
                     </div>
                     <div className="col-12 col-lg-6">
-                        <img src={img.service} className="border border-1 img-fluid" alt="" />
+                        <img src={img?.service} className="border border-1 img-fluid" alt="" />
                     </div>
                 </div>
             </div>
