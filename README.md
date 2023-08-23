@@ -1,5 +1,7 @@
 # GYM-NATION -- a gym workout, fitness, healthcare related website
 
+*This was a task for a course of programming hero in 2021*
+
 ## Table of contents
 
 - [Overview](#overview)
