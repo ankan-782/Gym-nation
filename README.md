@@ -73,7 +73,7 @@ npm start
 
 - Full website at larger devices
 
-![screenshot 1](./src/images/screenshots/landing-page-larger-device.png)
+![screenshot 1](./src/images/screenshots/landing-full-page.png)
 
 - Service page at larger devices
 
